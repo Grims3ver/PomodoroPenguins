@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 26e424fd974c8f0418f91ed08807419b
+timeCreated: 1455898914
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 56515
+  packageName: Penguins
+  packageVersion: 3.0
+  assetPath: Assets/Suriyun/Penguins/Prefab/PenguinC.prefab
+  uploadId: 835764

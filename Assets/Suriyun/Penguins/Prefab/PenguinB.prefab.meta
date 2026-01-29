@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bd5935b25c07c444a85b91b05a3d0abe
+timeCreated: 1455898913
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 56515
+  packageName: Penguins
+  packageVersion: 3.0
+  assetPath: Assets/Suriyun/Penguins/Prefab/PenguinB.prefab
+  uploadId: 835764
