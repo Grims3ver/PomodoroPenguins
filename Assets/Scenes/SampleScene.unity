@@ -242,6 +242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 28609652}
   - component: {fileID: 28609653}
+  - component: {fileID: 28609654}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -258,8 +259,8 @@ Transform:
   m_GameObject: {fileID: 28609651}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.13, y: 3.04, z: 9.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 4.13, y: 1.93, z: 9.7}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1400045462}
@@ -323,6 +324,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!195 &28609654
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28609651}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 2.56
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 5.12
+  m_BaseOffset: 2.56
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &31916602
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -655,7 +678,7 @@ GameObject:
   - component: {fileID: 187028640}
   - component: {fileID: 187028639}
   - component: {fileID: 187028638}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Window Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9623,15 +9646,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 412526643804709618, guid: 37ef185a32a5ed147b897792dd50e057, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2615203065421094040, guid: 37ef185a32a5ed147b897792dd50e057, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4326007739922731729, guid: 37ef185a32a5ed147b897792dd50e057, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4622799243872356936, guid: 37ef185a32a5ed147b897792dd50e057, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9695,11 +9718,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7341206966240919921, guid: 37ef185a32a5ed147b897792dd50e057, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7572484783024063991, guid: 37ef185a32a5ed147b897792dd50e057, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10082,7 +10105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8205485028793494964, guid: 8c5a72182853ed34a93f45602e4ff7c5, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8832805183516178190, guid: 8c5a72182853ed34a93f45602e4ff7c5, type: 3}
       propertyPath: m_LocalScale.x
@@ -15489,11 +15512,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2615203065421094040, guid: 37ef185a32a5ed147b897792dd50e057, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4326007739922731729, guid: 37ef185a32a5ed147b897792dd50e057, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4622799243872356936, guid: 37ef185a32a5ed147b897792dd50e057, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15557,11 +15580,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7341206966240919921, guid: 37ef185a32a5ed147b897792dd50e057, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7572484783024063991, guid: 37ef185a32a5ed147b897792dd50e057, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -20941,15 +20964,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 412526643804709618, guid: 37ef185a32a5ed147b897792dd50e057, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2615203065421094040, guid: 37ef185a32a5ed147b897792dd50e057, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4326007739922731729, guid: 37ef185a32a5ed147b897792dd50e057, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4622799243872356936, guid: 37ef185a32a5ed147b897792dd50e057, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21013,11 +21036,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7341206966240919921, guid: 37ef185a32a5ed147b897792dd50e057, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7572484783024063991, guid: 37ef185a32a5ed147b897792dd50e057, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21040,15 +21063,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 412526643804709618, guid: 37ef185a32a5ed147b897792dd50e057, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2615203065421094040, guid: 37ef185a32a5ed147b897792dd50e057, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4326007739922731729, guid: 37ef185a32a5ed147b897792dd50e057, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4622799243872356936, guid: 37ef185a32a5ed147b897792dd50e057, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21112,11 +21135,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7341206966240919921, guid: 37ef185a32a5ed147b897792dd50e057, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7572484783024063991, guid: 37ef185a32a5ed147b897792dd50e057, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21269,7 +21292,7 @@ GameObject:
   - component: {fileID: 1901433188}
   - component: {fileID: 1901433187}
   - component: {fileID: 1901433186}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Window Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21816,7 +21839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8205485028793494964, guid: 8c5a72182853ed34a93f45602e4ff7c5, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8832805183516178190, guid: 8c5a72182853ed34a93f45602e4ff7c5, type: 3}
       propertyPath: m_LocalScale.x
@@ -32616,7 +32639,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &184564467741384519
 MeshCollider:
@@ -33265,7 +33288,7 @@ GameObject:
   - component: {fileID: 4020380274362385005}
   - component: {fileID: 1166350694434436775}
   - component: {fileID: 6009575315276959086}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: cabin_Wall_Pointed (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33608,7 +33631,7 @@ GameObject:
   - component: {fileID: 3665116049162566565}
   - component: {fileID: 1529514034493788015}
   - component: {fileID: 4147405239323526101}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: cabin_Wall_Tall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33964,7 +33987,7 @@ GameObject:
   - component: {fileID: 3075493186970219078}
   - component: {fileID: 957770885197891212}
   - component: {fileID: 5621432030772329797}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: cabin_Wall_Pointed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34021,7 +34044,7 @@ GameObject:
   - component: {fileID: 3034785716963362159}
   - component: {fileID: 1006922639422730661}
   - component: {fileID: 3607297925339476109}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Christmas_Light_Rope_Curved (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34182,7 +34205,7 @@ GameObject:
   - component: {fileID: 3101177356645456192}
   - component: {fileID: 931522923616185738}
   - component: {fileID: 4041124870515523762}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: wreath
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34201,7 +34224,7 @@ GameObject:
   - component: {fileID: 2653939283554479692}
   - component: {fileID: 229781430847724166}
   - component: {fileID: 3424775311075300924}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: cabin_Wall_Tall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34271,7 +34294,7 @@ GameObject:
   - component: {fileID: 2767053566102406411}
   - component: {fileID: 108785436579852737}
   - component: {fileID: 8393501805004965726}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: cabin_Window (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34320,7 +34343,7 @@ GameObject:
   - component: {fileID: 2348320521630396150}
   - component: {fileID: 536524683489237564}
   - component: {fileID: 5623901007366445966}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: cabin_Support_Log_Snow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34639,7 +34662,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3204034199430174360}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: house
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34915,7 +34938,7 @@ GameObject:
   - component: {fileID: 1917899821012314789}
   - component: {fileID: 4429651904664542831}
   - component: {fileID: 184564467741384519}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Christmas_Light_Rope_Curved
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35446,7 +35469,7 @@ GameObject:
   - component: {fileID: 905284032222884394}
   - component: {fileID: 3131339082226632416}
   - component: {fileID: 3407123664449604097}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Christmas_Light_Rope_Straight_Long (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35701,7 +35724,7 @@ GameObject:
   - component: {fileID: 693920169923887049}
   - component: {fileID: 3334277799352093443}
   - component: {fileID: 6610287351746952604}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: cabin_Window (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35949,7 +35972,7 @@ GameObject:
   - component: {fileID: 445122785155120232}
   - component: {fileID: 2434639360932087970}
   - component: {fileID: 6066451182504820285}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: cabin_Window (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36687,7 +36710,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &5102957489611386866
 MeshCollider:
@@ -37466,7 +37489,7 @@ GameObject:
   - component: {fileID: 8053990272414765726}
   - component: {fileID: 5197561008090719828}
   - component: {fileID: 7248004618568346350}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: cabin_Wall_Tall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37942,7 +37965,7 @@ GameObject:
   - component: {fileID: 6996870181142325408}
   - component: {fileID: 5115270118855810154}
   - component: {fileID: 9219946090292673167}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: cabin_Window_Round (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37969,7 +37992,7 @@ GameObject:
   - component: {fileID: 7181849476120989896}
   - component: {fileID: 4922426995919594498}
   - component: {fileID: 1985678067429821908}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Christmas_Light_Rope_Straight_Short
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38334,7 +38357,7 @@ GameObject:
   - component: {fileID: 6441910985486759376}
   - component: {fileID: 9116047199175639322}
   - component: {fileID: 827389148686399365}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: cabin_Window (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38932,6 +38955,8 @@ GameObject:
   - component: {fileID: 8900804268467270734}
   - component: {fileID: 915705938605816280}
   - component: {fileID: 8900804268467270735}
+  - component: {fileID: 8900804268467270736}
+  - component: {fileID: 8900804268467270737}
   m_Layer: 8
   m_Name: Island_V2.001
   m_TagString: Untagged
@@ -38951,7 +38976,7 @@ GameObject:
   - component: {fileID: 5969563974337899935}
   - component: {fileID: 8447857381214378325}
   - component: {fileID: 8142676499175298484}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Christmas_Light_Rope_Straight_Long (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39099,15 +39124,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 412526643804709618, guid: 37ef185a32a5ed147b897792dd50e057, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2615203065421094040, guid: 37ef185a32a5ed147b897792dd50e057, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4326007739922731729, guid: 37ef185a32a5ed147b897792dd50e057, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4622799243872356936, guid: 37ef185a32a5ed147b897792dd50e057, type: 3}
       propertyPath: m_LocalPosition.x
@@ -39171,11 +39196,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7341206966240919921, guid: 37ef185a32a5ed147b897792dd50e057, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7572484783024063991, guid: 37ef185a32a5ed147b897792dd50e057, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -39514,7 +39539,7 @@ GameObject:
   - component: {fileID: 5372495029072967105}
   - component: {fileID: 7884141079981900043}
   - component: {fileID: 2320841472860499597}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: cabin_Roof_Snow_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39669,7 +39694,7 @@ GameObject:
   - component: {fileID: 5417932013031127082}
   - component: {fileID: 7842081126284725472}
   - component: {fileID: 5102957489611386866}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: cabin_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39841,6 +39866,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5331005137802221754, guid: d93b1d5ba7a964752901cb93efc84e19, type: 3}
+--- !u!114 &8900804268467270736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7929170944655886588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 896
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.11666667
+  m_MinRegionArea: 1
+  m_NavMeshData: {fileID: 23800000, guid: 357cc573e272ad944b57a70c33dfce9b, type: 2}
+  m_BuildHeightMesh: 0
+--- !u!114 &8900804268467270737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7929170944655886588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35e95dc5ff2b64380880dd7ac5922847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifierVolume
+  m_SerializedVersion: 0
+  m_Size: {x: 6.9465485, y: 3, z: 6.362783}
+  m_Center: {x: -4.7369766, y: 1, z: 3.9512513}
+  m_Area: 3
+  m_AffectedAgents: ffffffff
 --- !u!23 &8907126717354886775
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -39960,7 +40034,7 @@ GameObject:
   - component: {fileID: 4645242627924029113}
   - component: {fileID: 7463520968799492723}
   - component: {fileID: 69342038153970369}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: cabin_Roof_Snow_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40213,7 +40287,7 @@ GameObject:
   - component: {fileID: 4837131818848262118}
   - component: {fileID: 7260935694239949612}
   - component: {fileID: 5220623549359943574}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: cabin_Wall_Tall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
