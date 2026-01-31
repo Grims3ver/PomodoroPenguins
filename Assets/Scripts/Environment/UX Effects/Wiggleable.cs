@@ -1,45 +1,34 @@
 using UnityEngine;
 using System.Collections;
 
-public class Wiggleable : MonoBehaviour, Clickable
+public class Wiggleable : ClickableBehaviour
 {
     [Header("Pivot")]
     [SerializeField] Transform wigglePivot;
 
     [Header("Wiggle Feel")]
-    [SerializeField] float amplitudeDegrees = 6f;
+    [SerializeField] float amplitudeDegrees = 3f;
     [SerializeField] float duration = 0.25f;
-    [SerializeField] float frequency = 18f;
-    [SerializeField] float damping = 10f;
+    [SerializeField] float oscillations = 2.5f; //How many back-and-forths within duration
+    [SerializeField] float damping = 8f; //Higher = settles faster
 
     [Header("Direction")]
-    [SerializeField] bool swayRelativeToCamera = true;
-    [SerializeField] Camera cam;
-    [SerializeField] Vector3 swayDirectionWorld = Vector3.right; //Used if not relative to camera
-    [SerializeField] Vector3 upAxisWorld = Vector3.up;
-
-    [Header("Randomness")]
     [SerializeField] bool randomizeLeftRight = true;
 
-    Coroutine _routine;
-    Quaternion _restLocalRot;
+    private Coroutine _routine;
 
     void Reset()
     {
         //Auto-setup
         wigglePivot = transform;
-        cam = Camera.main;
     }
 
     void Awake()
     {
         if (!wigglePivot) wigglePivot = transform;
-        if (!cam) cam = Camera.main;
-
-        _restLocalRot = wigglePivot.localRotation;
     }
 
-    public void OnClick()
+    public override void OnClick()
     {
         Plink();
     }
@@ -52,25 +41,16 @@ public class Wiggleable : MonoBehaviour, Clickable
 
     IEnumerator WiggleRoutine()
     {
-        _restLocalRot = wigglePivot.localRotation;
+        Quaternion startRot = wigglePivot.localRotation;
 
-        //Pick the direction the top should move (left-right), then compute the rotation axis
-        Vector3 swayDir = swayRelativeToCamera && cam ? cam.transform.right : swayDirectionWorld;
+        //Camera doesn't rotate, so world right is stable
+        Vector3 swayDir = Vector3.right;
 
-        //Keep sway parallel to ground
-        swayDir.y = 0f;
-        if (swayDir.sqrMagnitude < 0.0001f) swayDir = Vector3.right;
-        swayDir.Normalize();
+        //Rotation axis that produces sway in swayDir while staying upright
+        Vector3 up = Vector3.up;
+        Vector3 axisWorld = Vector3.Cross(up, swayDir).normalized; //Usually -forward
 
-        Vector3 up = upAxisWorld;
-        up.Normalize();
-
-        //Rotation axis that produces sway in 'swayDir' while staying upright
-        Vector3 axisWorld = Vector3.Cross(up, swayDir);
-        if (axisWorld.sqrMagnitude < 0.0001f) axisWorld = Vector3.forward;
-        axisWorld.Normalize();
-
-        //Convert world axis to local axis for localRotation
+        //Convert world axis into the pivot's local space (once, at rest)
         Vector3 axisLocal = wigglePivot.InverseTransformDirection(axisWorld).normalized;
 
         float sign = 1f;
@@ -80,16 +60,20 @@ public class Wiggleable : MonoBehaviour, Clickable
         while (t < duration)
         {
             t += Time.deltaTime;
-            float n = t / Mathf.Max(0.0001f, duration);
+            float n = Mathf.Clamp01(t / Mathf.Max(0.0001f, duration));
 
+            //Damped sinusoid
             float decay = Mathf.Exp(-damping * n);
-            float angle = Mathf.Sin(n * frequency) * amplitudeDegrees * decay * sign;
+            float angle = Mathf.Sin(n * oscillations * Mathf.PI * 2f) * amplitudeDegrees * decay * sign;
 
-            wigglePivot.localRotation = _restLocalRot * Quaternion.AngleAxis(angle, axisLocal);
+            //Critical fix: apply rotation relative to the start rotation (no accumulation)
+            wigglePivot.localRotation = startRot * Quaternion.AngleAxis(angle, axisLocal);
+
             yield return null;
         }
 
-        wigglePivot.localRotation = _restLocalRot;
+        //Reset
+        wigglePivot.localRotation = startRot;
         _routine = null;
     }
 }

@@ -1,12 +1,10 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static Clickable;
 
 public class ClickDispatcher : MonoBehaviour
 {
     [SerializeField] Camera cam;
     [SerializeField] InputActionReference clickAction;
-    [SerializeField] LayerMask hitMask = ~0;
     [SerializeField] float maxDistance = 200f;
 
     void Awake()
@@ -33,18 +31,19 @@ public class ClickDispatcher : MonoBehaviour
         Vector2 mousePos = Mouse.current.position.ReadValue();
         Ray ray = cam.ScreenPointToRay(mousePos);
 
-        if (Physics.Raycast(ray, out RaycastHit hit, maxDistance, hitMask))
+        if (Physics.Raycast(ray, out RaycastHit hit, maxDistance))
         {
-            var behaviours = hit.collider.GetComponentsInParent<MonoBehaviour>(true);
-
-            for (int i = 0; i < behaviours.Length; i++)
+            Transform t = hit.collider.transform;
+            while (t != null)
             {
-                if (behaviours[i] is Clickable clickable)
+                ClickableBehaviour clickable = t.GetComponent<ClickableBehaviour>();
+                if (clickable)
                 {
                     clickable.OnClick();
-                    return; //Stop after first match
+                    return;
                 }
 
+                t = t.parent;
             }
         }
     }

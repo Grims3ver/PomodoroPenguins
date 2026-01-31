@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 [RequireComponent(typeof(Collider))]
-public class LightFadeToggle : MonoBehaviour, Clickable
+public class LightFadeToggle : ClickableBehaviour
 {
     [Header("Lights")]
     [SerializeField] Light[] targetLights;
@@ -47,8 +47,7 @@ public class LightFadeToggle : MonoBehaviour, Clickable
         _isOn = anyOn;
     }
 
-    //IClickable
-    public void OnClick()
+    public override void OnClick()
     {
         Toggle();
     }

@@ -17,10 +17,15 @@ public class PenguinWander3D : MonoBehaviour
     [Header("Animation")]
     private Animator animator;
     private string animationParamName = "animation";
-    private int idleValue = 0;
+    private int idleValue = 3;
     private int moveValue = 1;
 
     private int animationParamHash;
+
+    //logic use Random.insudeUnityCircle in goal Locations,
+    //to grab random point in that location
+    // then, play matching animation for each goal zone
+    //(for this world, snowball, clap, just do it, sn
 
     private void Awake()
     {
